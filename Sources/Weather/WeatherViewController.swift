@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class WeatherViewController: UIViewController {
+public class WeatherViewController: UIViewController {
 
     private let locationManager = CLLocationManager()
     private let weatherService = WeatherService()
