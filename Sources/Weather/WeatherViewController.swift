@@ -24,7 +24,7 @@ public class WeatherViewController: UIViewController {
         return label
     }()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "primaryBackground")
         view.addSubview(weatherLabel)
@@ -67,7 +67,7 @@ public class WeatherViewController: UIViewController {
 
 extension WeatherViewController: CLLocationManagerDelegate {
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             locationManager.stopUpdatingLocation()
             let latitude = location.coordinate.latitude
@@ -86,7 +86,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    public func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error fetching location: \(error)")
         weatherLabel.text = "Failed to get location."
     }
