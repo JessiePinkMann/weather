@@ -1,7 +1,6 @@
 // swift-tools-version: 5.10
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
-// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -21,10 +20,7 @@ let package = Package(
         .target(
             name: "Weather",
             dependencies: [],
-            path: "Sources",
-            resources: [
-                .process("Resources")
-            ]
+            path: "Sources"
         ),
         .testTarget(
             name: "WeatherTests",
